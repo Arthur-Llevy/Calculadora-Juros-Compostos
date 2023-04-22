@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { MainDiv } from '../styles/pages/main';
-import { Container } from '../styles/components/result';
+import { Container } from '../styles/pages/main';
 
 export function Main(){
 
