@@ -1,4 +1,4 @@
-import styled, { css, createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 	@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;600&display=swap');
@@ -74,6 +74,13 @@ export const MainDiv = styled.div`
 		background-color: white;
 		color: rgb(108, 0, 181);
 	}	
+
+	@media screen and (max-width: 470px) {
+    	div {
+    		width: 95%;
+    		height: 90%;
+    	}
+  	}
 `;
 
 export const ResultContainer = styled.div`

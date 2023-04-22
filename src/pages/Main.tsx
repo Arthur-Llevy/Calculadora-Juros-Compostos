@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { MainDiv } from '../styles/pages/main';
 import { Container } from '../styles/components/result';
 
