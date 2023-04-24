@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef,  } from 'react';
 import { MainDiv } from '../styles/pages/main';
 import { Container } from '../styles/pages/main';
 
@@ -45,12 +45,13 @@ export function Main(){
 		<>
 			<MainDiv>
 				<div>
-					<h1>Calculadora | Juros compostos</h1>					
-					<label htmlFor="initialMontant">Montante Inicial</label>
+					<h1>Calculadora | Juros compostos</h1>				
+					<h1>Arthur Levy (3°A - D.S.)</h1>
+					<label htmlFor="initialMontant">Capital Inicial</label>
 					<input required id="initialMontant" onChange={e => setInitialMontant(Number(e.target.value))}/>
-					<label htmlFor="index">Taxa</label>
+					<label htmlFor="index">Taxa (em decimal | a.a)</label>
 					<input id="index" onChange={e => setIndex(Number(e.target.value))}/>
-					<label htmlFor="finalMontant">Montante Final</label>
+					<label htmlFor="finalMontant">Capital Final</label>
 					<input id="finalMontant" onChange={e => setFinalMontant(Number(e.target.value))}/>
 					<button onClick={() => { calculate(); showAnwser()}}>Calcular</button>
 				</div>
