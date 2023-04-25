@@ -23,11 +23,12 @@ export const MainDiv = styled.div`
 	div {
 		width: 450px;
 		height: 550px;
-		background-color: #8c25d2;
+		background-color: rgb(140, 37, 210);
 		border-radius: 10px;
-		box-shadow: 2px 2px 4px #8212d0;
+		box-shadow: rgb(130, 18, 208) 2px 2px 10px, #bdbdbd -2px -2px 10px;
 		display: flex;
 		justify-content: space-evenly;
+		-moz-box-align: center;
 		align-items: center;
 		flex-direction: column;
 	}
@@ -53,6 +54,10 @@ export const MainDiv = styled.div`
 	  width: 180px;
 	  height: 32px;
 	  text-align: center;
+	}
+
+	input:hover {
+		border: 3px solid #a93bf4;
 	}
 
 	button {
@@ -155,6 +160,6 @@ export const Container = styled.div`
 	}
 
 	@media screen and (max-width: 470px){
-		width: 95%;
+		width: 90%;
 	}
 `;

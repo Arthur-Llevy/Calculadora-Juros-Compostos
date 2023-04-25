@@ -9,23 +9,18 @@ export function Main(){
 	let [initialMontant, setInitialMontant] = useState<number>(0);
 	let [index, setIndex] = useState<number>(0);
 	let [finalMontant, setFinalMontant] = useState<number>(0);	
-	let [result, setResult] = useState<number>(0);
 	let [visible, setVisible] = useState<boolean>(false);
 	let container = useRef<HTMLDivElement>(null);
 	let [anos, setAnos] = useState<number>(0);
 	let [meses, setmeses] = useState<number>(0);
 	let [dias, setdias] = useState<number>(0);
-
-
 	
 	function calculate(): void {
 	  let firstLog: number = Number((Math.log10(finalMontant / initialMontant)));
 	  let secondLog: number = Number((Math.log10(index + 1.0)));
 	  let resultado: number = (firstLog / secondLog);
-	  setResult(resultado)
 	  setAnos(Math.floor(resultado));
 	  setmeses(Math.floor((resultado - Math.floor(resultado)) * 12));	  
-	  console.log()
 	  setdias(Math.floor((meses - Math.floor(meses)) * 30));
 	};
 
