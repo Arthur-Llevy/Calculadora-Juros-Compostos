@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const MainDiv = styled.div`
 	width: 100%;
-	height: 100vh;		
+	height: 90vh;		
 	background-color: #f7f7f7;
 	justify-content: center;
 	align-items: center;
@@ -86,29 +86,6 @@ export const MainDiv = styled.div`
     		height: 90%;
     	}
   	}
-`;
-
-export const ResultContainer = styled.div`
-	
-	position: absolute;
-	width: 390px;
-	height: 150px;
-
-	div{
-		width: 390px;
-		height: 150px;
-		background-color: rgb(140, 37, 210);
-		border-radius: 10px;
-		box-shadow: rgb(130, 18, 208) 2px 2px 4px;
-		display: flex;
-		justify-content: space-evenly;
-		-moz-box-align: center;
-		align-items: center;
-		flex-direction: column;
-		position: absolute;
-		text-align: center;
-		transition: .2s;
-	}
 `;
 
 export const Container = styled.div`
