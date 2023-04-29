@@ -13,12 +13,15 @@ export const GlobalStyle = createGlobalStyle`
 
 export const MainDiv = styled.div`
 	width: 100%;
-	height: 90vh;		
-	background-color: #f7f7f7;
-	justify-content: center;
+	height: 100vh;
+	background-color: rgb(247, 247, 247);
+	-moz-box-pack: center;
+	-moz-box-align: center;
 	align-items: center;
 	display: flex;
 	color: white;
+	gap: 30px;
+	flex-direction: column;	
 
 	div {
 		width: 450px;
@@ -30,7 +33,8 @@ export const MainDiv = styled.div`
 		justify-content: space-evenly;
 		-moz-box-align: center;
 		align-items: center;
-		flex-direction: column;
+		flex-direction: column;		
+		margin: 10px;
 	}
 
 	h1 {
@@ -83,7 +87,7 @@ export const MainDiv = styled.div`
 	@media screen and (max-width: 470px) {
     	div {
     		width: 95%;
-    		height: 90%;
+    		height: 100%;
     	}
   	}
 `;

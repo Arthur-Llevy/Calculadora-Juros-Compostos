@@ -11,8 +11,7 @@ export const FooterDiv = styled.footer`
 	gap: 5px;
 	padding: 5px;
 	width: 100%;
-	position: absolute;
-	bottom: 0;
+	text-align: center;
 
 	a, p {
 		color: white;

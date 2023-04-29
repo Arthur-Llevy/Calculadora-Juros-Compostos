@@ -71,12 +71,12 @@ export function Main(){
 					/>
 					<button onClick={calculate}>Calcular</button>
 				</div>
+				<Footer />			
 			</MainDiv>
 			<Container ref={container}>
 				<button onClick={() => showAnwser('')}>Voltar</button>
 				<p ref={messageParagraph}></p>
 			</Container>		
-			<Footer />			
 		</>
 	);
 };
