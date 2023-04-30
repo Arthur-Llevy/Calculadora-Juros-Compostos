@@ -15,9 +15,7 @@ export function Main(){
 	let [anos, setAnos] = useState<number>(0);
 	let [meses, setmeses] = useState<number>(0);
 	let [dias, setdias] = useState<number>(0);
-	let message1: string = `O tempo necessário para o montante final ser de ${finalMontant} a uma taxa de ${index * 100}% é de ${anos} anos  ${meses} meses ${dias} dias.`;
-	let message2: string = 'Todos os campos precisam conter dados.';
-	let messageParagraph = useRef<HTMLParagraphElement>(null);
+	let [message, setMessage] = useState<string>('');
 	
 	function calculate(): void {
 
@@ -28,23 +26,24 @@ export function Main(){
 		 	setAnos(Math.floor(resultado));
 		 	setmeses(Math.floor((resultado - Math.floor(resultado)) * 12));	  
 		 	setdias(Math.floor((meses - Math.floor(meses)) * 30));
-		  	showAnwser(message1);
+		 	setMessage(`O tempo necessário para o montante final ser de ${finalMontant} a uma taxa de ${index * 100}% é de ${anos} anos  ${meses} meses ${dias} dias.`);
+		  	showAnwser();		  	
 
 		}else {
-			showAnwser(message2);
+			setMessage('Todos os campos precisam conter dados.');
+			showAnwser();
 		};
 	};
 
-	function showAnwser(message: string): void{				
+	function showAnwser(): void{				
 
-		if(container.current && visible && messageParagraph.current){
+		if(container.current && visible){
 			container.current.style.opacity = '0';
 			container.current.style.visibility = 'hidden';			
 			setVisible(false);
-		}else if(container.current && !visible && messageParagraph.current){
+		}else if(container.current && !visible){
 			container.current.style.opacity = '1';
 			container.current.style.visibility = 'initial';
-			messageParagraph.current.innerHTML = message;
 			setVisible(true);
 		};
 	};	
@@ -74,8 +73,8 @@ export function Main(){
 				<Footer />			
 			</MainDiv>
 			<Container ref={container}>
-				<button onClick={() => showAnwser('')}>Voltar</button>
-				<p ref={messageParagraph}></p>
+				<button onClick={showAnwser}>Voltar</button>
+				<p>{message}</p>
 			</Container>		
 		</>
 	);
