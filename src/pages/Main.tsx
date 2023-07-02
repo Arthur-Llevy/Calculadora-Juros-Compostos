@@ -53,19 +53,22 @@ export function Main(){
 			<MainDiv>
 				<div>
 					<h1>Calculadora | Juros compostos</h1>				
-					<label htmlFor="initialMontant">Capital Inicial</label>
+					<label htmlFor="initialMontant">Capital inicial</label>
 					<input 
 						id="initialMontant"
+						placeholder="Ex.: 1200"
 						onChange={e => setInitialMontant(Number(e.target.value))}
 					/>
-					<label htmlFor="index">Taxa (em decimal | a.a)</label>
+					<label htmlFor="index">Taxa</label>
 					<input 
 						id="index"
-						onChange={e => setIndex(Number(e.target.value))}
+						placeholder="Ex.: 20.5"
+						onChange={e => setIndex(Number(e.target.value) / 100)}
 					/>
-					<label htmlFor="finalMontant">Capital Final</label>
+					<label htmlFor="finalMontant">Montante final</label>
 					<input
 						id="finalMontant" 
+						placeholder="Ex.: 2300"
 						onChange={e => setFinalMontant(Number(e.target.value))}
 					/>
 					<button onClick={calculate}>Calcular</button>
